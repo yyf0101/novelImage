@@ -1,0 +1,163 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram name="第 1 页" id="le0v4z1jR-YsIKVwno5y">
+    <mxGraphModel dx="1012" dy="618" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="main_frame" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="478" width="760" x="40" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_plane_frame" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;dashed=1;" value="" vertex="1">
+          <mxGeometry height="150" width="720" x="60" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl_plane_label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" value="控制平面 (Control Plane)" vertex="1">
+          <mxGeometry height="30" width="200" x="60" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="CPU" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="axi_lite" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="AXI-Lite 总线" vertex="1">
+          <mxGeometry height="60" width="160" x="580" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_cpu_bus1" edge="1" parent="1" source="cpu" style="endArrow=classic;startArrow=classic;html=1;dashed=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="axi_lite" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_cpu_bus2" edge="1" parent="1" source="cpu" style="endArrow=classic;startArrow=classic;html=1;dashed=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="axi_lite" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="mode_ctrl" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="模式控制模块&#xa;(Mode_Ctrl Module)" vertex="1">
+          <mxGeometry height="80" width="160" x="340" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="cpu_to_mode" edge="1" parent="1" source="cpu" style="endArrow=classic;html=1;dashed=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="mode_ctrl" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="axi_to_mode" edge="1" parent="1" source="axi_lite" style="endArrow=classic;html=1;dashed=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="mode_ctrl" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="op_l1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子 (Operator)" vertex="1">
+          <mxGeometry height="40" width="100" x="60" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="op_l2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子 (Operator)" vertex="1">
+          <mxGeometry height="40" width="100" x="180" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="op_r1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子 (Operator)" vertex="1">
+          <mxGeometry height="40" width="100" x="560" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="op_r2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子 (Operator)" vertex="1">
+          <mxGeometry height="40" width="100" x="680" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="bus_l" edge="1" parent="1" source="cpu" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="op_l1" value="AXI-Lite Bus">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="240" />
+              <mxPoint x="110" y="240" />
+            </Array>
+            <mxPoint x="160" y="240" as="sourcePoint" />
+            <mxPoint x="110" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bus_l2" edge="1" parent="1" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="op_l2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="240" />
+            </Array>
+            <mxPoint x="160" y="240" as="sourcePoint" />
+            <mxPoint x="230" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bus_r" edge="1" parent="1" source="axi_lite" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="op_r2" value="AXI-Lite Bus">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="240" />
+              <mxPoint x="730" y="240" />
+            </Array>
+            <mxPoint x="660" y="240" as="sourcePoint" />
+            <mxPoint x="730" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bus_r2" edge="1" parent="1" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="op_r1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="240" />
+            </Array>
+            <mxPoint x="660" y="240" as="sourcePoint" />
+            <mxPoint x="610" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cfg_l" edge="1" parent="1" source="op_l2" style="endArrow=classic;startArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="mode_ctrl" value="config_update">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cfg_r" edge="1" parent="1" source="op_r1" style="endArrow=classic;startArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="mode_ctrl" value="config_update">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="data_plane_frame" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="140" width="720" x="60" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="data_plane_label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" value="数据平面 (Data Plane)" vertex="1">
+          <mxGeometry height="30" width="200" x="63" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="blue_fan4" edge="1" parent="1" source="mode_ctrl" style="endArrow=none;html=1;strokeColor=#2E64FE;strokeWidth=2;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" value="config_update">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="460" y="360" as="sourcePoint" />
+            <mxPoint x="596" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sync" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="同步 (Sync)" vertex="1">
+          <mxGeometry height="40" width="100" x="80" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="fft1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="FFT" vertex="1">
+          <mxGeometry height="40" width="100" x="240" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="fft2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="FFT" vertex="1">
+          <mxGeometry height="40" width="100" x="400" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="demap" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="解调 (Demap)" vertex="1">
+          <mxGeometry height="40" width="100" x="560" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="axi_stream_line" edge="1" parent="1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=2;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="80" y="450" as="sourcePoint" />
+            <mxPoint x="700" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="axi_stream_label" connectable="0" parent="axi_stream_line" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="AXI-Stream" vertex="1">
+          <mxGeometry relative="1" x="0.5" as="geometry">
+            <mxPoint x="84" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="axi_stream_l1" connectable="0" parent="axi_stream_line" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="AXI-Stream" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint x="3" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="down2" edge="1" parent="1" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fft1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="290" y="450" as="sourcePoint" />
+            <mxPoint x="290" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="down3" edge="1" parent="1" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fft2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="450" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cfg_update_dp" parent="1" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontSize=11;" value="config_update" vertex="1">
+          <mxGeometry height="20" width="100" x="133" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="zz6XPMVp8bsyv0SkRQkB-1" edge="1" parent="1" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="609.58" y="450" as="sourcePoint" />
+            <mxPoint x="609.58" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zz6XPMVp8bsyv0SkRQkB-3" edge="1" parent="1" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="129.58" y="450" as="sourcePoint" />
+            <mxPoint x="129.58" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
