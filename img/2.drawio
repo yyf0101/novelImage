@@ -1,0 +1,123 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram name="第 1 页" id="e-3_eSd5py9P_PgmyRw2">
+    <mxGraphModel dx="1056" dy="645" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" value="图2-1 多制式（LTE/NR/Wi-Fi）物理层算法的数学同构性映射示意图" vertex="1">
+          <mxGeometry height="30" width="700" x="40" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="layer1_bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F2F4F4;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="120" width="700" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="layer1_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#666666" value="协议层：异构通信标准" vertex="1">
+          <mxGeometry height="20" width="250" x="50" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="lte_block" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;fontColor=#ffffff;fontStyle=1" value="4G LTE" vertex="1">
+          <mxGeometry height="40" width="120" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lte_params" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" value="SCS: 15kHz&#xa;FFT: 2048点&#xa;CP: 常规/扩展" vertex="1">
+          <mxGeometry height="40" width="120" x="80" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="nr_block" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontColor=#ffffff;fontStyle=1" value="5G NR" vertex="1">
+          <mxGeometry height="40" width="120" x="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nr_params" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" value="SCS: 15/30/60...kHz&#xa;FFT: 4096点&#xa;参数集: 灵活配置" vertex="1">
+          <mxGeometry height="40" width="120" x="280" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="wifi_block" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2ECC71;strokeColor=#27AE60;fontColor=#ffffff;fontStyle=1" value="Wi-Fi 6/7" vertex="1">
+          <mxGeometry height="40" width="120" x="480" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wifi_params" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" value="SCS: 78.125kHz&#xa;FFT: 256/512...&#xa;保护间隔: 0.8us" vertex="1">
+          <mxGeometry height="40" width="120" x="480" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow1" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#BDC3C7;strokeColor=#7F8C8D;width=10;endSize=6;fontSize=11;" value="参数化">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="140" y="180" as="sourcePoint" />
+            <mxPoint x="340" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow2" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#BDC3C7;strokeColor=#7F8C8D;width=10;endSize=6;fontSize=11;" value="抽象化">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="180" as="sourcePoint" />
+            <mxPoint x="340" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow3" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#BDC3C7;strokeColor=#7F8C8D;width=10;endSize=6;fontSize=11;" value="映射">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="540" y="180" as="sourcePoint" />
+            <mxPoint x="340" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="layer2_bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF9E7;strokeColor=#F1C40F;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="217" width="400" x="140" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="layer2_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#D35400" value="数学同构层" vertex="1">
+          <mxGeometry height="20" width="400" x="140" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="math_box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D35400;dashed=1;fontSize=11;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;核心算理：N点 DFT/IDFT 与线性代数&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="94" width="360" x="160" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="formula" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" value="$$x[n] = \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} X[k] \cdot e^{j \frac{2\pi}{N} kn}$$" vertex="1">
+          <mxGeometry height="40" width="340" x="170" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="iso1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F5B041;strokeColor=#D68910;fontColor=#ffffff;fontStyle=1;fontSize=10" value="运算内核同构&#xa;(DFT/矩阵运算)" vertex="1">
+          <mxGeometry height="50" width="100" x="160" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="iso2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F5B041;strokeColor=#D68910;fontColor=#ffffff;fontStyle=1;fontSize=10" value="处理范式同构&#xa;(DAG 数据流)" vertex="1">
+          <mxGeometry height="50" width="100" x="290" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="iso3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F5B041;strokeColor=#D68910;fontColor=#ffffff;fontStyle=1;fontSize=10" value="参数化收敛&#xa;(配置空间)" vertex="1">
+          <mxGeometry height="50" width="100" x="420" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_down" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#5DADE2;strokeColor=#2E86C1;width=15;endSize=8;fontSize=11;" value="硬件实现">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="342.57" y="473" as="sourcePoint" />
+            <mxPoint x="342.57" y="523" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="layer3_bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBDEF0;strokeColor=#8E44AD;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="120" width="600" x="43" y="529" as="geometry" />
+        </mxCell>
+        <mxCell id="layer3_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#5B2C6F" value="硬件层：符号级算子" vertex="1">
+          <mxGeometry height="20" width="300" x="53" y="534" as="geometry" />
+        </mxCell>
+        <mxCell id="op_fft" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#9B59B6;strokeColor=#6C3483;fontColor=#ffffff;fontStyle=1" value="FFT/IFFT&#xa;引擎" vertex="1">
+          <mxGeometry height="50" width="100" x="83" y="569" as="geometry" />
+        </mxCell>
+        <mxCell id="op_fft_cfg" parent="1" style="text;html=1;align=center;fontSize=9;fontColor=#555555" value="配置: 点数N=2048/4096..." vertex="1">
+          <mxGeometry height="20" width="100" x="83" y="624" as="geometry" />
+        </mxCell>
+        <mxCell id="op_sync" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#9B59B6;strokeColor=#6C3483;fontColor=#ffffff;fontStyle=1" value="同步/相关&#xa;算子" vertex="1">
+          <mxGeometry height="50" width="100" x="223" y="569" as="geometry" />
+        </mxCell>
+        <mxCell id="op_sync_cfg" parent="1" style="text;html=1;align=center;fontSize=9;fontColor=#555555" value="配置: 序列类型, 窗口" vertex="1">
+          <mxGeometry height="20" width="100" x="223" y="624" as="geometry" />
+        </mxCell>
+        <mxCell id="op_matrix" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#9B59B6;strokeColor=#6C3483;fontColor=#ffffff;fontStyle=1" value="矩阵运算&#xa;加速器" vertex="1">
+          <mxGeometry height="50" width="100" x="363" y="569" as="geometry" />
+        </mxCell>
+        <mxCell id="op_matrix_cfg" parent="1" style="text;html=1;align=center;fontSize=9;fontColor=#555555" value="配置: 维度MxN, 精度" vertex="1">
+          <mxGeometry height="20" width="100" x="363" y="624" as="geometry" />
+        </mxCell>
+        <mxCell id="op_demap" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#9B59B6;strokeColor=#6C3483;fontColor=#ffffff;fontStyle=1" value="解调映射&#xa;单元" vertex="1">
+          <mxGeometry height="50" width="100" x="503" y="569" as="geometry" />
+        </mxCell>
+        <mxCell id="op_demap_cfg" parent="1" style="text;html=1;align=center;fontSize=9;fontColor=#555555" value="配置: QAM阶数" vertex="1">
+          <mxGeometry height="20" width="100" x="503" y="624" as="geometry" />
+        </mxCell>
+        <mxCell id="config_flow" edge="1" parent="1" source="iso3" style="endArrow=classic;html=1;dashed=1;strokeColor=#E67E22;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="layer3_bg" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="470" y="420" as="sourcePoint" />
+            <mxPoint x="520" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="config_label" connectable="0" parent="config_flow" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#E67E22;fontStyle=1" value="配置参数流" vertex="1">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
