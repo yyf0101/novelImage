@@ -34,16 +34,16 @@
         <mxCell id="axi_to_mode" edge="1" parent="1" source="axi_lite" style="endArrow=classic;html=1;dashed=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="mode_ctrl" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry" />
         </mxCell>
-        <mxCell id="op_l1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子 (Operator)" vertex="1">
+        <mxCell id="op_l1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子" vertex="1">
           <mxGeometry height="40" width="100" x="60" y="300" as="geometry" />
         </mxCell>
-        <mxCell id="op_l2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子 (Operator)" vertex="1">
+        <mxCell id="op_l2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子" vertex="1">
           <mxGeometry height="40" width="100" x="180" y="300" as="geometry" />
         </mxCell>
-        <mxCell id="op_r1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子 (Operator)" vertex="1">
+        <mxCell id="op_r1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子" vertex="1">
           <mxGeometry height="40" width="100" x="560" y="300" as="geometry" />
         </mxCell>
-        <mxCell id="op_r2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子 (Operator)" vertex="1">
+        <mxCell id="op_r2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" value="算子" vertex="1">
           <mxGeometry height="40" width="100" x="680" y="300" as="geometry" />
         </mxCell>
         <mxCell id="bus_l" edge="1" parent="1" source="cpu" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="op_l1" value="AXI-Lite Bus">
@@ -155,6 +155,12 @@
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="129.58" y="450" as="sourcePoint" />
             <mxPoint x="129.58" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AW2yYr0WOxCIiXMNT69c-1" edge="1" parent="1" source="mode_ctrl" style="endArrow=none;html=1;strokeColor=#2E64FE;strokeWidth=2;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" value="config_update">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="458" y="393" as="sourcePoint" />
+            <mxPoint x="228" y="449" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
