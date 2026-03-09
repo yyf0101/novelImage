@@ -1,0 +1,169 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram name="第 1 页" id="tnI3koyXD1YvEdk0EQCc">
+    <mxGraphModel dx="4113" dy="2340" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="第三层：硬件原子执行与回滚" vertex="1">
+          <mxGeometry height="803" width="451" x="8" y="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="第二层：数字孪生推演" vertex="1">
+          <mxGeometry height="627" width="289" x="479" y="905" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="第一层：多维安全约束校验" vertex="1">
+          <mxGeometry height="897" width="412" x="788" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="LLM 生成修复策略&#xa;A=addr, val" vertex="1">
+          <mxGeometry height="78" width="188" x="944" y="8" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rhombus;strokeWidth=2;whiteSpace=wrap;" value="静态语义约束&#xa;C_static" vertex="1">
+          <mxGeometry height="174" width="174" x="951" y="161" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rhombus;strokeWidth=2;whiteSpace=wrap;" value="动态状态约束&#xa;C_dynamic" vertex="1">
+          <mxGeometry height="174" width="174" x="890" y="409" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rhombus;strokeWidth=2;whiteSpace=wrap;" value="性能边界约束&#xa;C_perf" vertex="1">
+          <mxGeometry height="174" width="174" x="823" y="657" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="拒绝/修正策略" vertex="1">
+          <mxGeometry height="54" width="164" x="998" y="942" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="SystemC/Python&#xa;协同仿真环境" vertex="1">
+          <mxGeometry height="78" width="178" x="529" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="模拟运行 T_sim 时隙" vertex="1">
+          <mxGeometry height="54" width="208" x="514" y="1083" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="rhombus;strokeWidth=2;whiteSpace=wrap;" value="KPI 恶化?" vertex="1">
+          <mxGeometry height="119" width="119" x="558" y="1187" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="拦截高风险操作" vertex="1">
+          <mxGeometry height="54" width="172" x="552" y="1429" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Phase 1: Prepare&#xa;写入影子寄存器 Shadow Bank" vertex="1">
+          <mxGeometry height="102" width="260" x="117" y="1405" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Phase 2: Commit&#xa;写入 Trigger 触发原子更新" vertex="1">
+          <mxGeometry height="78" width="247" x="124" y="1582" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" value="硬件看门狗&#xa;T_guard" vertex="1">
+          <mxGeometry height="95" width="95" x="200" y="1710" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="rhombus;strokeWidth=2;whiteSpace=wrap;" value="链路状态监控" vertex="1">
+          <mxGeometry height="150" width="150" x="172" y="1855" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="自动回滚 Rollback&#xa;恢复 Backup Bank" vertex="1">
+          <mxGeometry height="78" width="189" x="61" y="2080" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="1" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" value="执行成功" vertex="1">
+          <mxGeometry height="79" width="79" x="300" y="2079" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" source="5" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="6" style="curved=1;startArrow=none;endArrow=block;exitX=0.26;exitY=1;entryX=0.5;entryY=0;" target="7" value="Pass">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="977" y="372" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" source="7" style="curved=1;startArrow=none;endArrow=block;exitX=0.23;exitY=1;entryX=0.5;entryY=0;" target="8" value="Pass">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" edge="1" parent="1" source="8" style="curved=1;startArrow=none;endArrow=block;exitX=0.32;exitY=1;entryX=1;entryY=0.21;" target="10" value="Pass">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="866" y="868" />
+              <mxPoint x="866" y="905" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" source="6" style="curved=1;startArrow=none;endArrow=block;exitX=0.84;exitY=1;entryX=0.61;entryY=0;" target="9" value="Fail">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1123" y="372" />
+              <mxPoint x="1123" y="905" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25" edge="1" parent="1" source="7" style="curved=1;startArrow=none;endArrow=block;exitX=0.78;exitY=1;entryX=0.41;entryY=0;" target="9" value="Fail">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1045" y="620" />
+              <mxPoint x="1045" y="905" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="26" edge="1" parent="1" source="8" style="curved=1;startArrow=none;endArrow=block;exitX=0.67;exitY=1;entryX=0.17;entryY=0;" target="9" value="Fail">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="952" y="868" />
+              <mxPoint x="952" y="905" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="27" edge="1" parent="1" source="10" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="11" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="28" edge="1" parent="1" source="11" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="29" edge="1" parent="1" source="12" style="curved=1;startArrow=none;endArrow=block;exitX=0.61;exitY=1;entryX=0.5;entryY=0.01;" target="13" value="Yes">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="638" y="1343" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="30" edge="1" parent="1" source="12" style="curved=1;startArrow=none;endArrow=block;exitX=0.22;exitY=1;entryX=1;entryY=0.2;" target="14" value="No">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="563" y="1343" />
+              <mxPoint x="563" y="1380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="31" edge="1" parent="1" source="14" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="15" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="32" edge="1" parent="1" source="15" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="16" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33" edge="1" parent="1" source="16" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="17" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34" edge="1" parent="1" source="17" style="curved=1;startArrow=none;endArrow=block;exitX=0.09;exitY=1;entryX=0.5;entryY=0;" target="18" value="异常/超时">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="155" y="2042" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="35" edge="1" parent="1" source="17" style="curved=1;startArrow=none;endArrow=block;exitX=0.91;exitY=1;entryX=0.5;entryY=0;" target="19" value="稳定">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="339" y="2042" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
