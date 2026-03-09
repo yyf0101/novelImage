@@ -1,0 +1,168 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram name="第 1 页" id="_BLzLyAYuzMGFQ5kxCzU">
+    <mxGraphModel dx="1349" dy="540" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" value="图4-1 通信领域本体模型 (Communication Domain Ontology Model)" vertex="1">
+          <mxGeometry height="30" width="700" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="protocol" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=#2980B9;fontColor=#ffffff;fontStyle=1" value="Protocol" vertex="1">
+          <mxGeometry height="50" width="120" x="320" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="proto_attrs" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#555555;" value="- standard_version&#xa;- frequency_band&#xa;- subcarrier_spacing" vertex="1">
+          <mxGeometry height="50" width="120" x="450" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="module" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E67E22;strokeColor=#D35400;fontColor=#ffffff;fontStyle=1" value="Module" vertex="1">
+          <mxGeometry height="50" width="120" x="320" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="mod_attrs" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#555555;" value="- code_path&#xa;- clock_domain&#xa;- resource_usage" vertex="1">
+          <mxGeometry height="50" width="120" x="450" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="register" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2ECC71;strokeColor=#27AE60;fontColor=#ffffff;fontStyle=1" value="Register" vertex="1">
+          <mxGeometry height="50" width="120" x="80" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_attrs" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#555555;" value="- base_addr&#xa;- width&#xa;- access_type" vertex="1">
+          <mxGeometry height="40" width="120" x="80" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=#C0392B;fontColor=#ffffff;fontStyle=1" value="Error" vertex="1">
+          <mxGeometry height="50" width="120" x="320" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="err_attrs" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#555555;" value="- severity&#xa;- symptom&#xa;- detection_mech" vertex="1">
+          <mxGeometry height="50" width="120" x="450" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="solution" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9B59B6;strokeColor=#8E44AD;fontColor=#ffffff;fontStyle=1" value="Solution" vertex="1">
+          <mxGeometry height="50" width="120" x="560" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="sol_attrs" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#555555;" value="- action_type&#xa;- script_template" vertex="1">
+          <mxGeometry height="40" width="120" x="560" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_impl" edge="1" parent="1" source="module" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" target="protocol" value="implements">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="190" as="sourcePoint" />
+            <mxPoint x="380" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_conf" edge="1" parent="1" source="register" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="module" value="configures">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="210" y="225" as="sourcePoint" />
+            <mxPoint x="310" y="225" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_causes_reg" edge="1" parent="1" source="register" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="error" value="causes">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="345" />
+            </Array>
+            <mxPoint x="140" y="260" as="sourcePoint" />
+            <mxPoint x="310" y="345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_causes_mod" edge="1" parent="1" source="module" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="error" value="causes">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="260" as="sourcePoint" />
+            <mxPoint x="380" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_fixes" edge="1" parent="1" source="solution" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#27AE60;strokeWidth=2;" target="error" value="fixes">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="550" y="345" as="sourcePoint" />
+            <mxPoint x="450" y="345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_sub" edge="1" parent="1" source="module" style="endArrow=classic;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;curved=1;" target="module" value="submodule_of">
+          <mxGeometry height="50" relative="1" width="50" x="-0.0087" y="-3" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="464" y="253" />
+              <mxPoint x="492" y="260" />
+              <mxPoint x="534" y="247" />
+              <mxPoint x="563" y="220" />
+              <mxPoint x="534" y="196" />
+              <mxPoint x="508" y="183" />
+              <mxPoint x="464" y="188" />
+            </Array>
+            <mxPoint x="450" y="240" as="sourcePoint" />
+            <mxPoint x="450" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="divider" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#999999;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="40" y="440" as="sourcePoint" />
+            <mxPoint x="740" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="title2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" value="图4-2 跨模态知识抽取与融合框架 (Cross-Modal Knowledge Extraction &amp; Fusion Framework)" vertex="1">
+          <mxGeometry height="30" width="700" x="40" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="src_doc" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#F9E79F;strokeColor=#D4AC0D;" value="标准文档&#xa;(PDF/Word)" vertex="1">
+          <mxGeometry height="60" width="80" x="100" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="src_code" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#AED6F1;strokeColor=#3498DB;" value="RTL代码&#xa;(Verilog)" vertex="1">
+          <mxGeometry height="60" width="80" x="340" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="src_log" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#D7BDE2;strokeColor=#8E44AD;" value="运行日志&#xa;(Log Stream)" vertex="1">
+          <mxGeometry height="60" width="80" x="580" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="pipe_doc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#F1C40F;" value="文档抽取管道&#xa;(NLP/LLM)" vertex="1">
+          <mxGeometry height="80" width="120" x="80" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="doc_steps" parent="1" style="text;html=1;align=left;fontSize=10;" value="1. 布局分析&#xa;2. 实体识别(NER)&#xa;3. 关系抽取" vertex="1">
+          <mxGeometry height="40" width="100" x="90" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="pipe_code" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D6EAF8;strokeColor=#5DADE2;" value="AST静态分析管道&#xa;(Static Analysis)" vertex="1">
+          <mxGeometry height="80" width="120" x="320" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="code_steps" parent="1" style="text;html=1;align=left;fontSize=10;" value="1. 语法树构建&#xa;2. 寄存器映射&#xa;3. 拓扑还原" vertex="1">
+          <mxGeometry height="40" width="100" x="330" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="pipe_log" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBDEF0;strokeColor=#AF7AC5;" value="日志实体化管道&#xa;(Drain/SBERT)" vertex="1">
+          <mxGeometry height="80" width="120" x="560" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="log_steps" parent="1" style="text;html=1;align=left;fontSize=10;" value="1. 模板聚类&#xa;2. 语义链接&#xa;3. 事件建模" vertex="1">
+          <mxGeometry height="40" width="100" x="570" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="fusion_box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EAEDED;strokeColor=#BDC3C7;fontStyle=1" value="多模态知识融合层 (Fusion Layer)" vertex="1">
+          <mxGeometry height="60" width="600" x="80" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="fusion_steps" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;" value="实体对齐 (Entity Alignment) | 关系消歧 (Relation Resolution) | 时序一致性 (Temporal Consistency)" vertex="1">
+          <mxGeometry height="30" width="560" x="100" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="dkg" parent="1" style="cloud;whiteSpace=wrap;html=1;fillColor=#D5F5E3;strokeColor=#2ECC71;fontStyle=1;fontSize=14" value="通信领域知识图谱 (DKG)" vertex="1">
+          <mxGeometry height="100" width="200" x="280" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="src_doc" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pipe_doc" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="src_code" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pipe_code" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="src_log" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pipe_log" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="pipe_doc" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" target="fusion_box" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="pipe_code" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fusion_box" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" edge="1" parent="1" source="pipe_log" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" target="fusion_box" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" edge="1" parent="1" source="fusion_box" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;" target="dkg" value="Output">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="onto_constraint" edge="1" parent="1" style="endArrow=open;html=1;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="fusion_box" value="Ontology Constraints">
+          <mxGeometry height="50" relative="1" width="50" x="0.3261" y="-17" as="geometry">
+            <mxPoint y="-1" as="offset" />
+            <Array as="points">
+              <mxPoint x="-2" y="552" />
+            </Array>
+            <mxPoint x="80" y="770" as="sourcePoint" />
+            <mxPoint x="60" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
