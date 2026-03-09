@@ -104,29 +104,29 @@
         <mxCell id="src_log" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#D7BDE2;strokeColor=#8E44AD;" value="运行日志&#xa;(Log Stream)" vertex="1">
           <mxGeometry height="60" width="80" x="580" y="520" as="geometry" />
         </mxCell>
-        <mxCell id="pipe_doc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#F1C40F;" value="文档抽取管道&#xa;(NLP/LLM)" vertex="1">
+        <mxCell id="pipe_doc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#F1C40F;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;文档抽取管道&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(NLP/LLM)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="120" x="80" y="620" as="geometry" />
         </mxCell>
         <mxCell id="doc_steps" parent="1" style="text;html=1;align=left;fontSize=10;" value="1. 布局分析&#xa;2. 实体识别(NER)&#xa;3. 关系抽取" vertex="1">
-          <mxGeometry height="40" width="100" x="90" y="650" as="geometry" />
+          <mxGeometry height="40" width="100" x="95" y="654" as="geometry" />
         </mxCell>
-        <mxCell id="pipe_code" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D6EAF8;strokeColor=#5DADE2;" value="AST静态分析管道&#xa;(Static Analysis)" vertex="1">
+        <mxCell id="pipe_code" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D6EAF8;strokeColor=#5DADE2;" value="AST静态分析管道&lt;br&gt;(Static Analysis)&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="120" x="320" y="620" as="geometry" />
         </mxCell>
         <mxCell id="code_steps" parent="1" style="text;html=1;align=left;fontSize=10;" value="1. 语法树构建&#xa;2. 寄存器映射&#xa;3. 拓扑还原" vertex="1">
-          <mxGeometry height="40" width="100" x="330" y="650" as="geometry" />
+          <mxGeometry height="40" width="100" x="334" y="654" as="geometry" />
         </mxCell>
-        <mxCell id="pipe_log" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBDEF0;strokeColor=#AF7AC5;" value="日志实体化管道&#xa;(Drain/SBERT)" vertex="1">
+        <mxCell id="pipe_log" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBDEF0;strokeColor=#AF7AC5;" value="日志实体化管道&lt;br&gt;(Drain/SBERT)&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="80" width="120" x="560" y="620" as="geometry" />
         </mxCell>
         <mxCell id="log_steps" parent="1" style="text;html=1;align=left;fontSize=10;" value="1. 模板聚类&#xa;2. 语义链接&#xa;3. 事件建模" vertex="1">
-          <mxGeometry height="40" width="100" x="570" y="650" as="geometry" />
+          <mxGeometry height="40" width="100" x="580" y="657" as="geometry" />
         </mxCell>
-        <mxCell id="fusion_box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EAEDED;strokeColor=#BDC3C7;fontStyle=1" value="多模态知识融合层 (Fusion Layer)" vertex="1">
+        <mxCell id="fusion_box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EAEDED;strokeColor=#BDC3C7;fontStyle=1" value="多模态知识融合层 (Fusion Layer)&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="600" x="80" y="740" as="geometry" />
         </mxCell>
         <mxCell id="fusion_steps" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;" value="实体对齐 (Entity Alignment) | 关系消歧 (Relation Resolution) | 时序一致性 (Temporal Consistency)" vertex="1">
-          <mxGeometry height="30" width="560" x="100" y="760" as="geometry" />
+          <mxGeometry height="30" width="560" x="95" y="764" as="geometry" />
         </mxCell>
         <mxCell id="dkg" parent="1" style="cloud;whiteSpace=wrap;html=1;fillColor=#D5F5E3;strokeColor=#2ECC71;fontStyle=1;fontSize=14" value="通信领域知识图谱 (DKG)" vertex="1">
           <mxGeometry height="100" width="200" x="280" y="840" as="geometry" />
