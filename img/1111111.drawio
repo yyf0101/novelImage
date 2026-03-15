@@ -1,0 +1,217 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram name="第 1 页" id="ZVSDjf1np763-85Kpa0-">
+    <mxGraphModel dx="1898" dy="1172" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="before" parent="1" style="swimlane;startSize=30;rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0e0;strokeColor=#d32f2f;fontColor=#1a1a1a;" value="改造前（全量扫描）" vertex="1">
+          <mxGeometry height="900" width="729" x="35" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="B0" parent="before" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;fontColor=#1a1a1a;" value="开始" vertex="1">
+          <mxGeometry height="50" width="240" x="220" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="B1" parent="before" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="读取入参/配置&#xa;repo、AB 文件路径、batch_size、ByteCodeScan_File_Count 等" vertex="1">
+          <mxGeometry height="70" width="440" x="120" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="B2" parent="before" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="解析待处理 AB 参数列表" vertex="1">
+          <mxGeometry height="55" width="320" x="180" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="B3" parent="before" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="按 batch_size 切分 AB 参数批次" vertex="1">
+          <mxGeometry height="55" width="340" x="170" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="B4" parent="before" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="遍历每个 AB 批次" vertex="1">
+          <mxGeometry height="90" width="200" x="240" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="B5" parent="before" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="全量收集待扫描文件&#xa;扫描整个代码路径（全仓 cpp/h）" vertex="1">
+          <mxGeometry height="70" width="400" x="140" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="B6" parent="before" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="对全量文件执行 ByteCodeScan&#xa;使用当前批次 AB 参数" vertex="1">
+          <mxGeometry height="65" width="360" x="160" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="B7" parent="before" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="输出修改结果 → 进入后续处理&#xa;（clang-tidy/提交 等）" vertex="1">
+          <mxGeometry height="65" width="380" x="150" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="B8" parent="before" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;fontColor=#1a1a1a;" value="结束" vertex="1">
+          <mxGeometry height="50" width="240" x="220" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="B_note" parent="before" style="shape=note;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#d32f2f;fontColor=#b71c1c;" value="每批次都扫全路径，范围大、循环耗时高" vertex="1">
+          <mxGeometry height="120" width="140" x="578" y="472" as="geometry" />
+        </mxCell>
+        <mxCell id="eB0" edge="1" parent="before" source="B0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#616161;" target="B1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB1" edge="1" parent="before" source="B1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="B2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB2" edge="1" parent="before" source="B2" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="B3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB3" edge="1" parent="before" source="B3" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="B4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB4" edge="1" parent="before" source="B4" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="B5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB5" edge="1" parent="before" source="B5" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="B6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB6" edge="1" parent="before" source="B6" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="B7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB7loop" edge="1" parent="before" source="B7" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="B4" value="下一批次">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="730" />
+              <mxPoint x="80" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eB4end" edge="1" parent="before" source="B4" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="B8" value="所有批次完成">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="568" y="440" />
+              <mxPoint x="568" y="825" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="after" parent="1" style="swimlane;startSize=30;rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;fontColor=#1a1a1a;" value="改造后（初筛 + 精准扫描）" vertex="1">
+          <mxGeometry height="1203" width="980" x="820" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="A0" parent="after" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;fontColor=#1a1a1a;" value="开始" vertex="1">
+          <mxGeometry height="50" width="240" x="220" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="A1" parent="after" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="读取入参/配置&#xa;repo、AB 文件路径、batch_size、ByteCodeScan_File_Count 等" vertex="1">
+          <mxGeometry height="70" width="440" x="120" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="A2" parent="after" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="解析待处理 AB 参数列表" vertex="1">
+          <mxGeometry height="55" width="320" x="180" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="A3" parent="after" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="按 batch_size 切分 AB 参数批次" vertex="1">
+          <mxGeometry height="55" width="340" x="170" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="A4" parent="after" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="遍历每个 AB 批次" vertex="1">
+          <mxGeometry height="90" width="200" x="240" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="A5" parent="after" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#0d47a1;fontColor=#0d47a1;" value="构造本批次 AB 的 grep 模式&#xa;OR 正则 或 AB 列表" vertex="1">
+          <mxGeometry height="70" width="380" x="150" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="A6" parent="after" style="rhombus;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#0d47a1;fontColor=#0d47a1;" value="是否存在 parallel" vertex="1">
+          <mxGeometry height="90" width="200" x="240" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="A7" parent="after" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#0d47a1;fontColor=#0d47a1;" value="并行 grep 初筛（highlight）&#xa;grep -rl 命中 → 汇总去重&#xa;candidate_files" vertex="1">
+          <mxGeometry height="90" width="280" x="90" y="725" as="geometry" />
+        </mxCell>
+        <mxCell id="A8" parent="after" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#0d47a1;fontColor=#0d47a1;" value="串行 grep 初筛（fallback）&#xa;OR 正则 grep -rl&#xa;candidate_files" vertex="1">
+          <mxGeometry height="90" width="280" x="390" y="725" as="geometry" />
+        </mxCell>
+        <mxCell id="A9" parent="after" style="rhombus;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#0d47a1;fontColor=#0d47a1;" value="candidate_files 是否为空？" vertex="1">
+          <mxGeometry height="90" width="200" x="240" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="A10" parent="after" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#1a5e20;fontColor=#1a5e20;" value="跳过本批次 ByteCodeScan" vertex="1">
+          <mxGeometry height="55" width="280" x="70" y="955" as="geometry" />
+        </mxCell>
+        <mxCell id="A11" parent="after" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#1a5e20;fontColor=#1a5e20;" value="仅对 candidate_files 执行 ByteCodeScan" vertex="1">
+          <mxGeometry height="55" width="280" x="370" y="955" as="geometry" />
+        </mxCell>
+        <mxCell id="A12" parent="after" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#616161;fontColor=#1a1a1a;" value="输出修改结果 → 进入后续处理" vertex="1">
+          <mxGeometry height="55" width="340" x="190" y="1035" as="geometry" />
+        </mxCell>
+        <mxCell id="A13" parent="after" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;fontColor=#1a1a1a;" value="结束" vertex="1">
+          <mxGeometry height="50" width="240" x="220" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="A_note" parent="after" style="shape=note;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;fontColor=#1b5e20;" value="仅保留包含本批次 AB 的文件&#xa;显著减少 ByteCodeScan 扫描范围与循环次数" vertex="1">
+          <mxGeometry height="140" width="140" x="738" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="eA0" edge="1" parent="after" source="A0" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="A1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eA1" edge="1" parent="after" source="A1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="A2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eA2" edge="1" parent="after" source="A2" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="A3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eA3" edge="1" parent="after" source="A3" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="A4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eA4" edge="1" parent="after" source="A4" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="A5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eA5" edge="1" parent="after" source="A5" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#0d47a1;html=1;" target="A6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eA6yes" edge="1" parent="after" source="A6" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#0d47a1;html=1;" target="A7" value="是">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="720" />
+              <mxPoint x="220" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eA6no" edge="1" parent="after" source="A6" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#0d47a1;html=1;" target="A8" value="否">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="720" />
+              <mxPoint x="520" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eA7toA9" edge="1" parent="after" source="A7" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#0d47a1;html=1;" target="A9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eA8toA9" edge="1" parent="after" source="A8" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#0d47a1;html=1;" target="A9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eA9empty" edge="1" parent="after" source="A9" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#1a5e20;html=1;" target="A10" value="为空">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eA9not" edge="1" parent="after" source="A9" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#1a5e20;html=1;" target="A11" value="非空">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eA10loop" edge="1" parent="after" source="A10" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="A4" value="下一批次">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="980" />
+              <mxPoint x="40" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eA11toA12" edge="1" parent="after" source="A11" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="A12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eA12loop" edge="1" parent="after" source="A12" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="A4" value="下一批次">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="931" y="1060" />
+              <mxPoint x="931" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eA4end" edge="1" parent="after" source="A4" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;strokeColor=#616161;html=1;" target="A13" value="所有批次完成">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="702" y="440" />
+              <mxPoint x="702" y="1145" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
